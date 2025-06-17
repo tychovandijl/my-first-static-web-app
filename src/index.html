@@ -9,13 +9,24 @@
 </head>
 
 <body>
-  <header>
-    <h1>De Samenhang Tussen Dadels en Ruggengraten</h1>
-  </header>
-  <main>
-    <section>
-      <h2>Wat zijn dadels?</h2>
-      <p>Dadels zijn voedzame vruchten die rijk zijn aan vitamines, mineralen en vezels. Ze worden vaak geprezen om hun gezondheidsvoordelen.</p>
+<div id="map" style="height: 400px; width: 100%;"></div>
+<script>
+  function initMap() {
+    var datePalmLocations = {lat: 30.0, lng: 40.0}; // Example coordinates
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 2,
+      center: datePalmLocations
+    });
+    var marker = new google.maps.Marker({
+      position: datePalmLocations,
+      map: map,
+      title: 'Locaties waar dadels groeien'
+    });
+  }
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
     </section>
     <section>
       <h2>De rol van voeding voor een gezonde ruggengraat</h2>
